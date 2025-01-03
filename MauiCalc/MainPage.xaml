@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiCalc.MainPage"
+             Title="Calculator">
+        <ContentPage.Resources>
+                <ResourceDictionary>
+                        <Style TargetType="Button">
+                                <Setter Property="BackgroundColor"
+                                        Value="LightGray"/>
+                                <Setter Property="TextColor"
+                                                Value="Black"/>
+                                <Setter Property="CornerRadius"
+                                        Value="5"/>
+                                <Setter Property="Margin"
+                                        Value="5"/>
+                        </Style>
+                        <Style TargetType="Entry">
+                                <Setter Property="FontSize"
+                                                Value="20"/>
+                                <Setter Property="TextColor"
+                                                Value="Black"/>
+                                <Setter Property="BackgroundColor"
+                                                Value="White"/> 
+                        </Style>
+                </ResourceDictionary>
+        </ContentPage.Resources>
+
+        <StackLayout>
+                <Entry x:Name="ResultEntry"
+                       Text="0"
+                       HorizontalOptions="Fill"
+                       IsEnabled="False"/>
+
+                <Grid RowDefinitions="Auto, Auto, Auto, Auto"
+                      ColumnDefinitions="Auto, Auto, Auto, Auto"
+                      RowSpacing="5"
+                      ColumnSpacing="5"
+                      Margin="15">
+                        <Button Text="7"
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                Clicked="OnNumberButtonClicked"/>
+                        <Button Text="8"
+                                Grid.Row="0"
+                                Grid.Column="1"
+                                Clicked="OnNumberButtonClicked"/>
+                        <Button Text="9"
+                                Grid.Row="0"
+                                Grid.Column="2"
+                                Clicked="OnNumberButtonClicked"/>
+                        <Button Text="/"
+                                Grid.Row="0"
+                                Grid.Column="3"
+                                Clicked="OnOperatorButtonClicked"/>
+
+                        <Button Text="4"
+                                Grid.Row="1"
+                                Grid.Column="0"
+                                Clicked="OnNumberButtonClicked"/>
+                        <Button Text="5"
+                                Grid.Row="1"
+                                Grid.Column="1"
+                                Clicked="OnNumberButtonClicked"/>
+                        <Button Text="6"
+                                Grid.Row="1"
+                                Grid.Column="2"
+                                Clicked="OnNumberButtonClicked"/>
+                        <Button Text="*"
+                                Grid.Row="1"
+                                Grid.Column="3"
+                                Clicked="OnOperatorButtonClicked"/>
+
+                        <Button Text="1"
+                                Grid.Row="2"
+                                Grid.Column="0"
+                                Clicked="OnNumberButtonClicked"/>
+                        <Button Text="2"
+                                Grid.Row="2"
+                                Grid.Column="1"
+                                Clicked="OnNumberButtonClicked"/>
+                        <Button Text="3"
+                                Grid.Row="2"
+                                Grid.Column="2"
+                                Clicked="OnNumberButtonClicked"/>
+                        <Button Text="-"
+                                Grid.Row="2"
+                                Grid.Column="3"
+                                Clicked="OnOperatorButtonClicked"/>
+
+                        <Button Text="0"
+                                Grid.Row="3"
+                                Grid.Column="1"
+                                Clicked="OnNumberButtonClicked"/>
+                        <Button Text="C"
+                                Grid.Row="3"
+                                Grid.Column="0"
+                                Clicked="OnClearButtonClicked"/>
+                        <Button Text="+"
+                                Grid.Row="3"
+                                Grid.Column="2"
+                                Clicked="OnOperatorButtonClicked"/>
+                        <Button Text="="
+                                Grid.Row="3"
+                                Grid.Column="3"
+                                Clicked="OnCalculateButtonClicked"/>
+
+
+                </Grid>
+
+        </StackLayout>
+
+</ContentPage>
